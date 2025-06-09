@@ -1,4 +1,4 @@
-name: First Workflow
+name: Second Workflow
 
 on: 
     workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
               run: cowsay -f dragon "Run for cover" >> dragon.txt
 
             - name: Test file existence
-              run: grep -i "dragon" dragon.txt 
+              run: grep -i "for" dragon.txt 
 
             - name: Read file content
               run: cat dragon.txt
