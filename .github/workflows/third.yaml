@@ -18,8 +18,8 @@ jobs:
                 ls -la
                 chmod +x ascii.sh
                 ls -la
-                cat ${{ secrets.SECRET1 }}
-                cat ${{ vars.SECRET2 }}
+                cat $secrets.SECRET1
+                cat $SECRET2
                 ./ascii.sh
         
             - name: Artifact upload
