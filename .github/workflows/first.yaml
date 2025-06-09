@@ -13,10 +13,10 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Welcome Message
-              run: echo "Welcome to the first workflow!"
+              run: |
+                echo "Welcome to the first workflow!"
+                ls -la
+                cat README.md
 
-            - name: List files
-              run: ls
-
-            - name: Read file
-              run: cat README.md
+            - name: Generate ASCII Artwork
+              uses: cowsay -f dragon "Run for cover" >> dragon.txt
