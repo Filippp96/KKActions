@@ -21,8 +21,10 @@ jobs:
                 ls -la
                 chmod +x ascii.sh
                 ls -la
-                cat $SECRET1
-                cat $VARIABLE1
+                echo $SECRET1
+                echo $VARIABLE1
+                echo ${{ vars.VARIABLE1 }}
+                echo ${{ secrets.SECRET1 }}
                 ./ascii.sh
         
             - name: Artifact upload
