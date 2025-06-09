@@ -1,6 +1,9 @@
 name: First Workflow
 
-on: push
+on: 
+    workflow_dispatch:
+    push:
+
 
 jobs:
     first_job:
@@ -11,6 +14,6 @@ jobs:
 
             - name: List files
               run: ls
-              
+
             - name: Read file
               run: cat README.md
