@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
     push:
 
-ENV:
+env:
     VARIABLE1: ${{ vars.VARIABLE1 }}
     SECRET1: ${{ secrets.SECRET1 }}
 
