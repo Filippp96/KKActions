@@ -4,6 +4,9 @@ on:
     workflow_dispatch:
     push:
 
+ENV:
+    VARIABLE1: ${{ vars.VARIABLE1 }}
+    SECRET1: ${{ secrets.SECRET1 }}
 
 jobs:
     first_job:
@@ -18,8 +21,8 @@ jobs:
                 ls -la
                 chmod +x ascii.sh
                 ls -la
-                cat ${{ secrets.SECRET1 }}
-                cat ${{ vars.VARIABLE1 }}
+                cat $SECRET1
+                cat $VARIABLE1
                 ./ascii.sh
         
             - name: Artifact upload
