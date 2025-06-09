@@ -18,3 +18,11 @@ jobs:
                 chmod +x ascii.sh
                 ls -la
                 ./ascii.sh
+
+    second_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Script execution
+              run: |
+                ls -la
+                sleep 5
