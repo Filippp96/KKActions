@@ -1,4 +1,4 @@
-name: Third Workflow
+name: Matrix Strategy Workflow
 
 on: 
     workflow_dispatch:
@@ -9,7 +9,7 @@ jobs:
         name: Matrix Job
         strategy: 
             matrix:
-                os: [ubuntu-latest, ubuntu-20.04, windows-latest, macos-latest]
+                os: [ubuntu-latest, ubuntu-22.04, windows-latest, macos-latest]
                 cmd: ["Matrix Strategy 1", "Matrix Strategy 2"]
         runs-on: ${{ matrix.os }} 
         steps:
