@@ -8,6 +8,7 @@ jobs:
     matrix:
         name: Matrix Job
         strategy: 
+            max-parallel: 4
             matrix:
                 os: [ubuntu-latest, ubuntu-22.04, windows-latest, macos-latest]
                 cmd: [Matrix Strategy 1, Matrix Strategy 2]
