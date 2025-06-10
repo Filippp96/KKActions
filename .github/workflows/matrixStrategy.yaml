@@ -13,7 +13,7 @@ jobs:
                 cmd: [Matrix Strategy 1, Matrix Strategy 2]
                 exclude:
                     - cmd: Matrix Strategy 2
-                      os: [windows-latest, macos-latest]   
+                      os: windows-latest  
                 include:
                     - cmd: Matrix Strategy 3
                       os: ubuntu-latest                
