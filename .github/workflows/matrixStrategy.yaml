@@ -12,11 +12,11 @@ jobs:
                 os: [ubuntu-latest, ubuntu-22.04, windows-latest, macos-latest]
                 cmd: [Matrix Strategy 1, Matrix Strategy 2]
                 exclude:
-                    - os: [windows-latest, macos-latest]
-                      cmd: Matrix Strategy 2
+                    - cmd: Matrix Strategy 2
+                      os: [windows-latest, macos-latest]   
                 include:
-                    - os: ubuntu-latest
-                      cmd: Matrix Strategy 3
+                    - cmd: Matrix Strategy 3
+                      os: ubuntu-latest                
         runs-on: ${{ matrix.os }} 
         steps:
             - name: Script execution on ${{ matrix.os }} 
